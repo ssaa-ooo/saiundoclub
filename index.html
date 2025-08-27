@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>彩雲堂倶楽部｜銀行向けお茶会モデル</title>
+  <meta name="description" content="銀行・信金の支店ロビーや応接室で、月1回の和菓子×抹茶お茶会を開催。顧客接点を強化し、地域に開かれた拠点へ。彩雲堂倶楽部の銀行向けモデルLPです。">
+  <style>
+    :root{
+      --bg:#0f0f12;--card:#14161a;--muted:#7e8896;--text:#eef2f6;--acc:#a7d129;--acc2:#5bc0eb;--line:#22262d;--brand:#d9b56b;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Noto Sans JP,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji",sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:50;background:rgba(15,15,18,.8);backdrop-filter:saturate(120%) blur(6px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;gap:20px}
+    .nav a{padding:12px 10px;color:var(--muted)}
+    .nav a:hover{color:var(--text)}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand-badge{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,#2a2f36,#3a3f46);display:grid;place-items:center;border:1px solid var(--line)}
+    .brand-badge svg{width:18px;height:18px}
+    .cta{margin-left:auto}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:#1a1e24;color:var(--text);transition:.2s}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(0,0,0,.25)}
+    .btn-primary{background:linear-gradient(135deg,#2b7a0b,#7bbf2a);border-color:#2b7a0b}
+
+    .hero{padding:64px 0 32px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 400px at 60% -10%,rgba(167,209,41,.25),transparent 60%)}
+    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.15;margin:0 0 12px}
+    .hero p.lead{color:var(--muted);font-size:clamp(16px,2.6vw,18px);margin:0 0 20px}
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 24px}
+    .badge{font-size:12px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03);color:#cfd6df}
+
+    .grid{display:grid;gap:20px}
+    .grid.cols-2{grid-template-columns:repeat(1,1fr)}
+    .grid.cols-3{grid-template-columns:repeat(1,1fr)}
+    @media(min-width:800px){.grid.cols-2{grid-template-columns:repeat(2,1fr)}.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+
+    section{padding:48px 0;border-bottom:1px solid var(--line)}
+    h2{font-size:clamp(22px,3.6vw,30px);margin:0 0 14px}
+    .section-lead{color:var(--muted);margin:-6px 0 22px}
+
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));border:1px solid var(--line);border-radius:16px;padding:18px}
+    .card h3{margin:0 0 6px;font-size:18px}
+    .card p{margin:6px 0 0;color:#cdd5df}
+
+    .plan{position:relative;padding:20px;border-radius:16px;border:1px solid var(--line);background:#121418}
+    .plan h3{margin:0 0 6px}
+    .price{font-weight:700;font-size:22px;margin:6px 0}
+    .popular{position:absolute;top:12px;right:12px;font-size:12px;background:var(--acc2);color:#0a0f14;padding:6px 10px;border-radius:999px}
+    .note{color:var(--muted);font-size:13px}
+
+    .kpis{display:flex;gap:14px;flex-wrap:wrap}
+    .kpi{flex:1 1 160px;border:1px dashed #2b313a;border-radius:12px;padding:12px}
+    .kpi b{display:block;font-size:22px}
+
+    .faq details{border:1px solid var(--line);border-radius:12px;padding:14px;background:#121418}
+    .faq summary{cursor:pointer;font-weight:600}
+
+    footer{padding:36px 0}
+    .small{font-size:13px;color:var(--muted)}
+    .cols{columns:1}@media(min-width:880px){.cols{columns:2;column-gap:24px}}
+    .list{margin:0;padding-left:18px}
+    .list li{margin:6px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="彩雲堂倶楽部 銀行向けモデル">
+        <span class="brand-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#d9b56b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 4l9 6.5"/><path d="M5 10v8h14v-8"/><path d="M9 14h6"/></svg>
+        </span>
+        <span>彩雲堂倶楽部｜銀行向けお茶会モデル</span>
+      </div>
+      <nav class="nav" aria-label="主要ナビゲーション">
+        <a href="#why">目的</a>
+        <a href="#plans">プラン</a>
+        <a href="#benefits">メリット</a>
+        <a href="#usecases">活用例</a>
+        <a href="#flow">導入の流れ</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="cta">
+        <a class="btn btn-primary" href="#contact" aria-label="お問い合わせへ移動">お問い合わせ</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container">
+        <h1>銀行ロビーが、月一の<ruby>茶菓<rt>さか</rt></ruby>サロンに。</h1>
+        <p class="lead">和菓子×抹茶×職人の実演で、来店のきっかけづくりと相談のハードルをやわらげる。<br>明治七年創業・松江の老舗「彩雲堂」による、銀行・信金向けお茶会プログラム。</p>
+        <div class="badges" role="list" aria-label="信用・特徴">
+          <span class="badge">創業明治七年</span>
+          <span class="badge">「現代の名工」在籍</span>
+          <span class="badge">最短：ロビーで90分開催</span>
+          <span class="badge">月1回から導入可能</span>
+        </div>
+        <a class="btn" href="#plans">プランを見る</a>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="container">
+        <h2>目的｜なぜ、銀行でお茶会なのか</h2>
+        <p class="section-lead">金融の“相談しづらさ”を、文化体験の温度で溶かす。来店頻度を高め、会話の質を深めます。</p>
+        <div class="grid cols-2">
+          <div class="card"><h3>顧客接点の創出</h3><p>「用事がないと行かない」支店に、毎月通いたくなる理由を用意。ロイヤルティ向上に。</p></div>
+          <div class="card"><h3>相談のハードルを低減</h3><p>和やかな空気の中で、資産運用・相続などのテーマへ自然に橋渡し。</p></div>
+          <div class="card"><h3>地域密着ブランディング</h3><p>伝統文化を媒介に、地域に開かれた拠点としての存在感を強化。</p></div>
+          <div class="card"><h3>VIP満足度の向上</h3><p>応接室での少人数開催で、関係性を深める“理由づくり”。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reasons">
+      <div class="container">
+        <h2>彩雲堂倶楽部が選ばれる3つの理由</h2>
+        <p class="section-lead">四季の菓、職人の所作、準備いらず。金融機関の現場で“ちょうど良い”体験を。</p>
+        <div class="grid cols-3">
+          <div class="card"><h3>四季折々の彩り</h3><p>季節感のある上生菓子で会話が弾む。来店動機の“定着”に効きます。</p></div>
+          <div class="card"><h3>本物の味と実演</h3><p>「現代の名工」による技の披露も可能。五感で楽しむ非日常を支店で。</p></div>
+          <div class="card"><h3>準備の手間いらず</h3><p>人数とご予算を伝えるだけ。必要物品の手配もお任せください。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="plans">
+      <div class="container">
+        <h2>ご要望に合わせて選べる3つのプラン</h2>
+        <p class="section-lead">価格は目安・税別。規模や開催場所によりお見積もりいたします。</p>
+        <div class="grid cols-3">
+          <div class="plan" aria-label="梅プラン">
+            <h3>梅プラン｜季節の和菓子</h3>
+            <p class="price">お一人様 400円 目安</p>
+            <ul class="list">
+              <li>季節の和菓子（人数分）</li>
+              <li>簡易運営サポート（設営ガイド）</li>
+              <li>職人の動画解説リンク</li>
+            </ul>
+            <p class="note">来店動機づくりの“入口”に最適。</p>
+          </div>
+          <div class="plan" aria-label="竹プラン">
+            <span class="popular">一番人気</span>
+            <h3>竹プラン｜和菓子＋お抹茶</h3>
+            <p class="price">お一人様 400円 + 10,000円 /10名様まで</p>
+            <ul class="list">
+              <li>季節の和菓子＋お抹茶セット</li>
+              <li>簡易点前・茶器一式（貸出）</li>
+              <li>運営台本（90分構成）</li>
+            </ul>
+            <p class="note">11名様以上は1名あたり+1,000円。</p>
+          </div>
+          <div class="plan" aria-label="松プラン">
+            <h3>松プラン｜和菓子＋職人実演</h3>
+            <p class="price">お一人様 400円 + 20,000円〜</p>
+            <ul class="list">
+              <li>職人派遣・上生菓子の実演</li>
+              <li>本格茶器演出・設営サポート</li>
+              <li>VIP向け少人数会にも対応</li>
+            </ul>
+            <p class="note">出張費は地域により変動します。</p>
+          </div>
+        </div>
+
+        <div class="cols" style="margin-top:18px">
+          <div class="card">
+            <h3>オプション</h3>
+            <ul class="list">
+              <li>季節の特別和菓子（桜・端午・七夕・重陽・新春 など）</li>
+              <li>招待制（VIP/資産顧客限定）設計</li>
+              <li>事前予約フォームの提供（参加履歴のデータ化）</li>
+              <li>商工会議所・茶道クラブとの共催アレンジ</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits">
+      <div class="container">
+        <h2>銀行側のメリット</h2>
+        <p class="section-lead">来店 → 会話 → 相談 の導線をやさしく設計。</p>
+        <div class="grid cols-3">
+          <div class="card"><h3>集客装置</h3><p>“月1の楽しみ”で継続来店。イベント告知がニュースレターの柱に。</p></div>
+          <div class="card"><h3>営業接点</h3><p>開始前後の短いセッションで、投資・保険・相続の相談へ自然遷移。</p></div>
+          <div class="card"><h3>ブランド価値</h3><p>伝統と文化を纏った拠点に。支店のファン化・口コミの促進。</p></div>
+        </div>
+        <div class="kpis" style="margin-top:16px">
+          <div class="kpi"><b>来店数</b><span class="small">月次イベント経由の実来店</span></div>
+          <div class="kpi"><b>相談件数</b><span class="small">会後1週間の予約増</span></div>
+          <div class="kpi"><b>NPS</b><span class="small">顧客満足度（アンケート）</span></div>
+          <div class="kpi"><b>VIP接点</b><span class="small">応接室開催の参加率</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="usecases">
+      <div class="container">
+        <h2>活用例</h2>
+        <div class="grid cols-3">
+          <div class="card"><h3>ロビーイベント（20–30名）</h3><p>「季節の和菓子でお茶会」。地域の話題化と来店動機に。</p></div>
+          <div class="card"><h3>VIP応接室（5–10名）</h3><p>「相続・資産セッション」前後にミニ茶会。深い対話へ。</p></div>
+          <div class="card"><h3>共催モデル</h3><p>商工会議所・茶道クラブ・地元学校と文化連携。CSRにも。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="flow">
+      <div class="container">
+        <h2>導入の流れ（最短2週間〜）</h2>
+        <ol class="list">
+          <li>ヒアリング（支店規模・目的・想定人数）</li>
+          <li>プラン選定・お見積り（梅／竹／松＋オプション）</li>
+          <li>告知クリエイティブ共有（店頭POP・店内放送・メール文）</li>
+          <li>当日運営（設営→実施→撤収）※運営台本・人員計画あり</li>
+          <li>効果測定（来店数・相談予約・アンケート）→次回改善</li>
+        </ol>
+        <div class="card" style="margin-top:12px">
+          <h3>安全・衛生について</h3>
+          <p class="small">食品衛生法および各自治体のガイドラインに基づき、手指消毒・器具の洗浄・スタッフ体調管理を徹底。アレルギー表示や個包装にも対応可能です。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <div class="container">
+        <h2>よくある質問</h2>
+        <div class="grid cols-2">
+          <details open>
+            <summary>配達・出張可能エリアは？</summary>
+            <p class="small">首都圏・関西圏・山陰エリアを中心に対応。その他の地域もご相談ください。出張費は地域により変動します。</p>
+          </details>
+          <details>
+            <summary>会場に水場や火気がなくても開催できますか？</summary>
+            <p class="small">簡易点前と電気ポットで実施可能です。火気使用が必要な演出は事前に可否を確認します。</p>
+          </details>
+          <details>
+            <summary>金融商品セミナーと併催しても良いですか？</summary>
+            <p class="small">はい。導線が自然になるよう10分程度の“お役立ちセッション”を推奨します。</p>
+          </details>
+          <details>
+            <summary>最小開催人数・時間は？</summary>
+            <p class="small">目安は10名・90分です。応接室の少人数開催にも対応します。</p>
+          </details>
+          <details>
+            <summary>請求区分は？</summary>
+            <p class="small">広告宣伝費・接待交際費など銀行様の運用に合わせてご提案します。</p>
+          </details>
+          <details>
+            <summary>試験導入は可能？</summary>
+            <p class="small">はい。1支店・3ヶ月トライアルからのスタートを推奨しています。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>お問い合わせ</h2>
+        <p class="section-lead">「銀行向けお茶会モデルの件で」とお伝えいただくとスムーズです。</p>
+        <div class="grid cols-2">
+          <div class="card">
+            <h3>彩雲堂 本店（代表）</h3>
+            <p class="small">受付 10:00〜17:00（平日）</p>
+            <p><a class="btn" href="tel:0852212727" aria-label="彩雲堂本店に電話">📞 0852-21-2727 に電話する</a></p>
+          </div>
+          <div class="card">
+            <h3>営業担当：米澤（よねざわ）</h3>
+            <p class="small">携帯直通</p>
+            <p><a class="btn" href="tel:08056137306" aria-label="営業担当に電話">📞 080-5613-7306 に電話する</a></p>
+          </div>
+        </div>
+        <p class="small" style="margin-top:8px">〒690-0064 島根県松江市天神町124</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="grid cols-2">
+        <div>
+          <div class="brand" style="margin-bottom:8px"><span class="brand-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#d9b56b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 4l9 6.5"/><path d="M5 10v8h14v-8"/><path d="M9 14h6"/></svg></span><strong>彩雲堂倶楽部</strong></div>
+          <p class="small">© 2025 SAIUNDO. All Rights Reserved.</p>
+        </div>
+        <div>
+          <p class="small">本ページは銀行・信用金庫等の金融機関向けにカスタマイズしたモデルのご案内です。表示価格は目安であり、地域・規模・開催形態により変動します。</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // スムーススクロール
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id=a.getAttribute('href');
+        if(id.length>1){
+          e.preventDefault();
+          const el=document.querySelector(id);
+          if(el){el.scrollIntoView({behavior:'smooth',block:'start'})}
+        }
+      })
+    })
+  </script>
+</body>
+</html>
